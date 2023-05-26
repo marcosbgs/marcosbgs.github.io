@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div class="logo"></div>
+
+      <div class="form">
+        <form action="">
+          <div class="logo">
+            <img src="imagens/logo_medicfy.png" width="150px" />
+          </div>
+          <br />
+          <input
+            type="text"
+            name="login"
+            id="login"
+            placeholder="Usuário"
+          /><br /><br />
+          <input
+            type="password"
+            name="senha"
+            id="senha"
+            placeholder="Senha"
+          /><br /><br />
+          <button type="submit" onclick="logar(); return false">ENTRAR</button
+          ><br /><br />
+          <div class="link">
+            <a href="http://">Cadastrar</a>
+            <a href="recuperarsenha.html">Recuperar Senha</a>
+          </div>
+
+          <script>
+            function logar() {
+              var login = document.getElementById("login").value;
+              var senha = document.getElementById("senha").value;
+
+              if (login == "admin" && senha == "12345") {
+                alert("Login efetuado com sucesso!");
+                location.href = "home.html";
+              } else {
+                alert("Usuário ou senha incorretos!");
+              }
+            }
+          </script>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
