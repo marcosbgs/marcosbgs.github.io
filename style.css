@@ -137,27 +137,43 @@ h1 {
 p1 {
   font-size: 14px;
 }
-footer {
-  margin-top: 20px;
-  background-image: url(src/abstract\ background.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  justify-content: center;
-  display: flex;
-  max-width: 100%;
-  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.1);
+.logo {
+  cursor: pointer;
 }
+
 .linha-vertical {
   border-left: 1px solid; /* Adiciona borda esquerda na div como ser fosse uma linha.*/
   box-sizing: border-box;
   margin-left: 40px;
 }
-.links_rodape > p {
+
+footer {
+  margin-top: 20px;
+  background-image: url(imagens/background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  justify-content: center;
+  display: flex;
+  max-width: 100%;
+  width: 100%;
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.links_rodape {
   font-size: 20px;
-  color: #ffffff;
+  color: #021f3b;
   font-weight: 500;
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 2px 0px 0px 8px;
 }
+
+.padding_rodape {
+  padding-top: 22px;
+}
+
 
 @media screen and (max-width: 680px) {
   .container_frase,
