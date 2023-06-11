@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow&family=Fira+Sans:wght@300&family=Oswald:wght@200;300;400;500;600;700&family=Roboto:wght@300&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="agendamento.css">
+  <title>Agendamento</title>
+</head>
+<body id="container">
+
+  <header>
+    <img src="imagens/logo_medicfy.png" class="logo" width="100px" />
+    <div>
+      <img src="imagens/icone_sair.png" class="buttonHeader" />
+      <img src="imagens/icone_perfil.png" class="buttonHeader" />
+    </div>
+  </ul>
+  </header>
+
+  <section class="fundo_titulo">
+    <h2>Espaço do Cliente</h2>
+  </section>
+
+  <div>
+      <div class="pergunta-atendimento">
+        <h4>Para quem será o atendimento?</h4>
+      </div>
+        <div class="wrapper">
+          <form>
+            <div class="radio-wrapper">
+              <input id="radio1" type="radio" name="paciente"  value="Titular" class="radio" checked>
+              <label for="radio1">Titular</label><br>
+            </div>
+            <div class="radio-wrapper">
+              <input id="radio2" type="radio" name="paciente"  value="Dependente" class="radio" checked>
+              <label for="radio2">Dependente</label><br>
+            </div>
+          </form>
+        </div>
+  </div>
+
+  <section>
+    <h4 class="pergunta-atendimento">Como deseja agendar o exame/consulta?</h4><br>
+    <form action="" method="post">
+      <div class="wrapper" class="butConvenioGeral">
+        <button class="butConvenio selected" type="submit" name="butConvenio">SUS</button>
+        <button class="butConvenio selected" type="submit" name="butConvenio">Convênio</button>
+        <button class="butConvenio selected" type="radio" name="butConvenio">Particular</button>
+      </div><br><br>
+
+      <div>
+        <h4 class="pergunta-convenios">Convênios</h4>
+        <div class="wrapper">
+          <select id="convenios" class="convenios">
+            <option value="convenios">Selecione o convênio</option>
+            <option value="arceloMittal">Arcelor Mittal</option>
+            <option value="allianz">Allianz</option>
+            <option value="amil">Amil</option>
+            <option value="bancoCentral">Banco Central do Brasil</option>
+            <option value="bradesco">Bradesco Saúde</option>
+            <option value="cemig">Cemig Saúde</option>
+            <option value="copass">Copass Saúde</option>
+            <option value="golden">Golden Cross</option>
+            <option value="ipsemg">Ipsemg</option>
+            <option value="metropax">Metropax</option>
+            <option value="promed">Promed</option>
+            <option value="caixa">Saúde Caixa</option>
+            <option value="petrobras">Saúde Petrobrás</option>
+            <option value="sulAmerica">Sul América Saúde</option>
+            <option value="sus">Sistema Único de Saúde - SUS</option>
+            <option value="unimed">Unimed</option>
+            <option value="usiminas">Usiminas</option>
+            <option value="vale">Vale</option>
+          </select>
+        </div>
+      </div><br><br>
+
+      <div class="wrapper">
+        <form action="" method="post">
+          <input  class="carteirinha" type="text" name="carteira" id="carteira" placeholder="NÚMERO DA CARTEIRINHA">
+        </form>
+      </div><br><br>
+
+      <div>
+        <button  class="butContinua butCancelaColor" type="submit">CANCELAR</button>
+        <button  class="butContinua butContinuaColor" type="submit">CONTINUAR</button>
+      </div><br><br>
+    </form>
+  </section>
+
+  <div id="footer">
+    <footer>
+          <img class="logo_rodape" src="imagens/logo_medicfy.png" alt="logo do medicfy" width="100px">
+          <div class="box linha-vertical"></div>
+          <div>
+              <div class="links_rodape">
+                <a class="padding_rodape" style="color: #021f3b;" href="http://">Contato</a> 
+              </div>
+              <div class="links_rodape">
+                <a style="color: #021f3b;" href="http://">Sobre Nós</a>
+              </div>
+          </div>
+    </footer>
+  </div>
+
+
+</body>
+</html>
