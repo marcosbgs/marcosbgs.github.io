@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <script src="JS/main.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="pagina_inicial.html"><img class="logo" src="src/logo_medicfy.png" alt="logo do medicfy" width="120px"></a>
+        </div>
+        <ul>
+            <a href="perfil.html"><li><img class="icone_perfil" src="src/icone_perfil.png" alt="Ícone de perfil" width="40px"><br>PERFIL</li></a>
+            <a href="pagina_inicial_sem_login.html"><li><img class="icone_sair" src="src/icone_sair.png" alt="Ícone de sair" width="40px"><br>SAIR</li></a>
+        </ul>
+    </header>
+
+    <div class="Titulo">
+        <section class = "fundo_titulo">
+        <h1>PERFIL</h1>
+    </div>
+
+
+
+    <p id="subtitulo">Meus dados</p>
+
+    <label class="perfil" for="nome">Nome:</label> 
+        <span class="dados" id="nome"></span><br>
+    <label class="perfil" for="data_nasc">Data de nascimento: </label>
+        <span class="dados"  id="data_nasci"></span><br>
+    <label class="perfil" for="cpf">CPF: </label>
+        <span class="dados"  id="cpf"></span><br>
+    <label class="perfil" for="telefone">Telefone: </label>
+        <span class="dados"  id="telefone"></span><br>
+    <label class="perfil" for="email">E-mail: </label>
+        <span class="dados"  id="email"></span><br>
+    <label class="perfil" for="sus">Número da carteira do convênio: </label>
+        <span class="dados"  id="sus"></span><br>
+    <label class="perfil" for="endereco">Endereço: </label>
+        <span class="dados"  id="endereco"></span>
+        
+    <div id="container_botoes">
+        <button onclick="redirecionar_pagina_perfil()" style="width: 17em; margin: 10px auto;" id="btn_editar">EDITAR</button>
+        <button style="width: 17em; margin: 10px auto;"  id="btn_historico">HISTÓRICO</button>
+        <button style="width: 17em; margin: 10px auto;"  id="btn_cancelar_agendamento">CANCELAR AGENDAMENTO</button>
+    </div>
+
+    <div id="procedimentos">
+        <p id="subtitulo">Procedimentos agendados</p>
+        <button onclick="verificarLocalStorage_consulta()" style="width: 17em; margin: 10px auto;" id="mostrarInformacoes">CONSULTAS</button>
+        <button onclick="verificarLocalStorage_exame()" style="width: 17em; margin: 10px auto;" id="procedimentos_exames">EXAMES</button><br>
+    </div>
+
+    <div id="card_perfil"></div>
+
+    
+
+    <footer>
+        <div>
+            <a href="pagina_inicial.html"><img class="logo_rodape" src="src/logo_medicfy.png" alt="logo do medicfy" width="120px"></a>
+        </div>
+        <div class="box linha-vertical"></div>
+        <div class="links_rodape" >
+            <p><a href="contato.html" class="links_rodape">Contato</p></a>
+            <p><a href="sobre_nos.html" class="links_rodape">Sobre nós</p></a>
+        </div>
+    </footer>    
+
+</body>
+</html>
