@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calendário</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="JS/main.js"></script>
+  <link rel="stylesheet" href="cadastro.css">
+</head>
+  <body>
+    <header>
+      <div>
+          <a href="pagina_inicial.html"><img class="logo" src="src/logo_medicfy.png" alt="logo do medicfy" width="120px"></a>
+      </div>
+      <ul>
+          <a href="perfil.html"><li><img class="icone_perfil" src="src/icone_perfil.png" alt="Ícone de perfil" width="40px"><br>PERFIL</li></a>
+          <a href="pagina_inicial_sem_login.html"><li><img class="icone_sair" src="src/icone_sair.png" alt="Ícone de sair" width="40px"><br>SAIR</li></a>
+      </ul>
+    </header>
+
+    <div class="Titulo">
+      <section class = "fundo_titulo">
+      <h1>ESPAÇO DO CLIENTE</h1>
+    </div>
+
+
+    <p>Selecione a especialidade</p>
+    <select id="especialidadeSelect" onchange="mostrarMedicos()">
+      <option value="">Selecione uma especialidade</option>
+      <option value="cardiologia">Cardiologia</option>
+      <option value="dermatologia">Dermatologia</option>
+      <option value="psicologia">Psicologia</option>
+    </select>
+
+    <div id="cardContainer"></div>
+
+    <input type="text" id="dataSelecionada" hidden>
+    <input type="text" id="horarioSelecionado"hidden>
+
+    
+    <p>Selecione a data</p>
+    <section id="periodo_horario">
+      <div id="calendario"></div>
+  
+      <div id="btn_periodo_horario">
+        <div id="periodo">
+          <p>Período</p>
+          <button class="periodo-btn" data-periodo="manha">Manhã</button>
+          <button class="periodo-btn" data-periodo="tarde">Tarde</button>
+          <button class="periodo-btn" data-periodo="noite">Noite</button>
+        </div>
+        <div id="horario">
+          <p>Horário</p>
+        
+          <!--horários do período da manhã-->
+          <button style="display: none;" class="horario-btn manha">8:00</button>
+          <button style="display: none;" class="horario-btn manha">8:30</button>
+          <button style="display: none;" class="horario-btn manha">9:00</button>
+          <button style="display: none;" class="horario-btn manha">9:30</button>
+          <br style="display: none;" class="horario-btn manha">
+          <button style="display: none;" class="horario-btn manha">10:00</button>
+          <button style="display: none;" class="horario-btn manha">10:30</button>
+          <button style="display: none;" class="horario-btn manha">11:00</button>
+          <button style="display: none;" class="horario-btn manha">11:30</button>
+          <!--horários do período da tarde-->
+          <button style="display: none;" class="horario-btn tarde">13:00</button>
+          <button style="display: none;" class="horario-btn tarde">13:30</button>
+          <button style="display: none;" class="horario-btn tarde">14:00</button>
+          <button style="display: none;" class="horario-btn tarde">14:30</button>
+          <button style="display: none;" class="horario-btn tarde">15:00</button>
+          <br class="horario-btn tarde">
+          <button style="display: none;" class="horario-btn tarde">15:30</button>
+          <button style="display: none;" class="horario-btn tarde">16:00</button>
+          <button style="display: none;" class="horario-btn tarde">16:30</button>
+          <button style="display: none;" class="horario-btn tarde">17:00</button>
+          <button style="display: none;" class="horario-btn tarde">17:30</button>
+          <!--horários do período da noite-->
+          <button style="display: none;" class="horario-btn noite">18:00</button>
+          <button style="display: none;" class="horario-btn noite">18:30</button>
+          <button style="display: none;" class="horario-btn noite">19:00</button>
+          <button style="display: none;" class="horario-btn noite">19:30</button>
+        </div>
+      </div>
+    </section>
+
+
+
+<br>
+<br>
+
+
+    <div id="finalizar_agendamento">
+      <button onclick="confirmar_agendamento()" type="submit" id="btn_confirmar_agendamento">CONFIRMAR</button>
+      <button type="reset" id="cancelar_agendamento">CANCELAR</button>
+    </div>
+
+    <footer>
+      <div>
+          <a href="pagina_inicial.html"><img class="logo_rodape" src="src/logo_medicfy.png" alt="logo do medicfy" width="120px"></a>
+      </div>
+      <div class="box linha-vertical"></div>
+      <div class="links_rodape" >
+          <p><a href="contato.html" class="links_rodape">Contato</p></a>
+          <p><a href="sobre_nos.html" class="links_rodape">Sobre nós</p></a>
+      </div>
+  </footer> 
+
+</body>
+</html>
