@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Agendar consulta</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="JS/main.js"></script>
+  <link rel="stylesheet" href="cadastro.css">
+</head>
+
+<body>
+    <header>
+      <div>
+          <a href="pagina_inicial.html"><img class="logo" src="src/logo_medicfy.png" alt="logo do medicfy" width="120px"></a>
+      </div>
+      <ul>
+          <a href="perfil.html"><li><img class="icone_perfil" src="src/icone_perfil.png" alt="Ícone de perfil" width="40px"><br>PERFIL</li></a>
+          <a href="pagina_inicial_sem_login.html"><li><img class="icone_sair" src="src/icone_sair.png" alt="Ícone de sair" width="40px"><br>SAIR</li></a>
+      </ul>
+    </header>
+
+    <div class="Titulo">
+        <section class = "fundo_titulo">
+        <h1>ESPAÇO DO CLIENTE</h1>
+      </div>
+
+      <br><p id="atendimento">Para quem será o atendimento?</p>
+
+      <div id="input_radio">
+        <input id="radio_titular" type="radio" class="titular_dependente" name="atendimento" value="Titular">
+          <label for="titular">Titular</label><br>
+        <input id="radio_dependente" type="radio" class="titular_dependente" name="atendimento" value="Dependente">
+          <label for="dependente">Dependente</label>
+      </div>
+
+      <div id="btn_plano">
+        <button onclick="mostrarDiv('container_SUS', this)">SUS</button>
+        <button onclick="mostrarDiv('container_convenio', this)">Convênio</button>
+        <button onclick="mostrarDiv('card_particular', this)">Particular</button>
+      </div>
+      
+      <div id="container_SUS" style="display: none;">
+        <label id="label_SUS">Sistema Único de Saúde</label><br>
+          <input type="text" id="SUS" placeholder="Número da carteira">
+      </div>
+
+      <div id="container_convenio" style="display: none;">
+        <label for="">Convênio</label><br>
+        <select id="convenio">
+          <option value=""></option>
+          <option value="Amil">Amil</option>
+          <option value="Bradesco">Bradesco</option>
+          <option value="Medial">Medial</option>
+          <option value="Sulamérica">Sulamérica</option>
+        </select>
+
+        <br><label for="convenio">Número da carteira do convênio</label><br>
+        <input type="text" class="convenio" placeholder="Número da carteira">
+      </div>
+
+      <div id="card_particular" style="display: none;">
+        <p class="particular"><strong>ATENÇÃO!</strong></p>
+        <p class="particular">* A forma de pagamento poderá ser escolhida após finalizar o agendamento!</p>
+        <p class="particular">* Todo e qualquer pagamento referente a consulta e/ou exame será realizado no local escolhido!</p>
+      </div>
+
+      <div id="btn_agendamento">
+        <button onclick="agendamento()" class="confirmar" type="submit">Confirmar</button>
+        <button class="cancelar">Cancelar</button>
+    </div>
+
+    <footer>
+        <div>
+            <a href="pagina_inicial.html"><img class="logo_rodape" src="src/logo_medicfy.png" alt="logo do medicfy" width="120px"></a>
+        </div>
+        <div class="box linha-vertical"></div>
+        <div class="links_rodape" >
+            <p><a href="contato.html" class="links_rodape">Contato</p></a>
+            <p><a href="sobre_nos.html" class="links_rodape">Sobre nós</p></a>
+        </div>
+    </footer> 
+    <script>
+      function mostrarDiv(id, botao) {
+        // Esconde todas as divs
+        document.getElementById("container_SUS").style.display = "none";
+        document.getElementById("container_convenio").style.display = "none";
+        document.getElementById("card_particular").style.display = "none";
+    
+        // Remove a classe de todos os botões
+        var botoes = document.querySelectorAll("#btn_plano button");
+        for (var i = 0; i < botoes.length; i++) {
+          botoes[i].classList.remove("botao-selecionado");
+        }
+    
+        // Mostra a div específica com base no id fornecido
+        document.getElementById(id).style.display = "block";
+    
+        // Adiciona a classe ao botão clicado
+        botao.classList.add("botao-selecionado");
+      }
+    </script>
+</body>
+</html>
